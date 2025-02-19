@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "NzcZ/A2XsRI=",
+  "success": true,
+  "projectFilePath": "/Users/chaiyapruekworasiha/Documents/Learning/dotnet-basic-learning/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "/Users/chaiyapruekworasiha/.nuget/packages/passwordgenerator/2.1.0/passwordgenerator.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,103 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "PasswordGenerator/2.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/PasswordGenerator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PasswordGenerator.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PasswordGenerator/2.1.0": {
+      "sha512": "G70cCeAOYCk/uTuFw5PBGpYY9kmBZyzld7tphachvyU514PowMRDYyKwTefxIHNGWrhXY2d1DV5B1tDEnTtY3A==",
+      "type": "package",
+      "path": "passwordgenerator/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/PasswordGenerator.dll",
+        "passwordgenerator.2.1.0.nupkg.sha512",
+        "passwordgenerator.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "PasswordGenerator >= 2.1.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/chaiyapruekworasiha/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/chaiyapruekworasiha/Documents/Learning/dotnet-basic-learning/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+      "projectName": "ConsoleApp1",
+      "projectPath": "/Users/chaiyapruekworasiha/Documents/Learning/dotnet-basic-learning/ConsoleApp1/ConsoleApp1/ConsoleApp1.csproj",
+      "packagesPath": "/Users/chaiyapruekworasiha/.nuget/packages/",
+      "outputPath": "/Users/chaiyapruekworasiha/Documents/Learning/dotnet-basic-learning/ConsoleApp1/ConsoleApp1/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/chaiyapruekworasiha/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "PasswordGenerator": {
+            "target": "Package",
+            "version": "[2.1.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
