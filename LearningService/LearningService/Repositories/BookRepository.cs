@@ -1,20 +1,40 @@
 using LearningService.Data;
 using LearningService.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LearningService.Repositories
 {
-    public class BookRepository : IBookRepository
+    public class BookRepository(ApplicationDbContext context) : IBookRepository
     {
-        private readonly ApplicationDbContext _context;
-
-       public BookRepository(ApplicationDbContext context)
+        public async Task<Book?> GetBookByIdAsync(int id)
         {
-            _context = context;
+            return await context.Books.FindAsync(id);  
+        }
+        public async Task<IEnumerable<Book?>> GetAllBooksAsync()
+        {
+            return await context.Books.ToListAsync();
         }
 
-        public async Task<Book> GetBookByIdAsync(int id)
+        public async Task AddBookAsync(Book? book)
         {
-            return await _context.Books.FindAsync(id);  
+            await context.Books.AddAsync(book);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task UpdateBookAsync(Book? book)
+        {
+            context.Books.Update(book);
+            await context.SaveChangesAsync();
+        }
+
+        public async Task DeleteBookAsync(int id)
+        {
+            var book = await context.Books.FindAsync(id);
+            if (book != null)
+            {
+                context.Books.Remove(book);
+                await context.SaveChangesAsync();
+            }
         }
     }
 }
