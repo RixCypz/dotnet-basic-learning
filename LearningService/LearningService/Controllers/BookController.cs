@@ -23,7 +23,7 @@ public class BookController(IBookService bookService) : ControllerBase
         return CreatedAtAction(nameof(GetBookById), new { id = book.Id }, book);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{id:int}")]
     public async Task<IActionResult> UpdateBook(int id, [FromBody] Book book)
     {
         if (id != book.Id) return BadRequest();
@@ -31,7 +31,7 @@ public class BookController(IBookService bookService) : ControllerBase
         return NoContent();
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     public async Task<IActionResult> DeleteBook(int id)
     {
         await bookService.DeleteBookAsync(id);
