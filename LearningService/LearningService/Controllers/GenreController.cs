@@ -18,4 +18,13 @@ public class GenreController(IGenreService genreService) : ControllerBase
         
         return Ok(genre);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> GetAllGenres([FromForm] int page = 1, [FromForm] int pageSize = 10)
+    {
+        if(page <= 0 || pageSize <= 0) return BadRequest("Page and PageSize are required.");
+        
+        var genres = await genreService.GetAllGenres(page, pageSize);
+        return Ok(genres);
+    }
 }

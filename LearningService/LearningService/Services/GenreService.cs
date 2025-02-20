@@ -9,4 +9,9 @@ public class GenreService(IGenreRepository genreRepository) : IGenreService
     {
         return await genreRepository.GetGenreByCodeAsync(code);
     }
+
+    public async Task<IEnumerable<Genre>> GetAllGenres(int page, int pageSize)
+    {
+        return await genreRepository.GetAllGenres(page, pageSize);
+    }
 }
