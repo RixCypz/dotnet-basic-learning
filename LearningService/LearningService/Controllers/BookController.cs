@@ -1,4 +1,5 @@
 using LearningService.Models;
+using LearningService.Models.Entities;
 using LearningService.Services;
 using Microsoft.AspNetCore.Mvc;
 
