@@ -2,6 +2,7 @@ using BasicUserService.Repositories.Implements;
 using BasicUserService.Repositories.Interfaces;
 using BasicUserService.Services.Implements;
 using BasicUserService.Services.Interfaces;
+using BasicUserService.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+
+builder.Services.AddSingleton<TokenValidationService>(provider =>
+    new TokenValidationService("your-strong-32-characters-long-secret-key!"));
 
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<ILoginService, LoginService>();
