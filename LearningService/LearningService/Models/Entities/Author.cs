@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LearningService.Models;
+namespace LearningService.Models.Entities;
 
 public class Author
 {

@@ -1,5 +1,5 @@
 using LearningService.Data;
-using LearningService.Models;
+using LearningService.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace LearningService.Repositories;
